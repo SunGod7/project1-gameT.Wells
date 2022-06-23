@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./app.js" defer></script>
     <link rel="stylesheet" href="./styles.css">
     <title>project1</title>
-</head>
-<body>
+ </head>
+ <body>
        <h1>"KAT KNAPPED"</h1>
-       <button onClick="startGame()">START</button>
-        <div id="timeDisplay" hidden>Time left: 7</div>
+       <button id="startBtn" onclick="startGame()">START</button>
+        <div id="timeDisplay" hidden>Time left: 25</div>
+        
+        <div id="scoreBrd">current score: 0</div>
     <div id="container">
-         <aside id="question-board"><h2>whats the answer ?</h2></aside>
-         <div id="opperations">0 + 0</div>
-         <aside id="top-right"><h2 id="movement"></h2></aside> 
+         <aside id="gameWon"><h2>whats the answer ?</h2></aside>
+         <div id="opperations">0 * 0</div>
+         <aside id="gameOver"><h2 id="movement"></h2></aside> 
         <main>
             <canvas id="canvas"><!-- play it, a game --></canvas>
         </main>
         <!-- <aside id="btm-left"><h2>100</h2></aside>
         <aside id="btm-right"><h2 id="status">play the game</h2></aside>  -->
       </div>
-      <div class="winning-message" id="winningMessage">
-        <div data-winning-message-text></div>
-        <button id="resetButton">Reset</button>
+      <!-- <div 
+        <div data-winning-message-text></div> -->
+       <button id="resetButton" onclick="reStart()">Reset</button> 
         <br>
-        <button id="ansBtn1">4</button>
-        <button id="ansBtn2">8</button>
-        <button id="ansBtn3">16</button>
-      </div>
+      <button onclick="checkAnswer(1)" id="ansBtn1">0</button>
+      <button onclick="checkAnswer(2)" id="ansBtn2">0</button>
+      <button onclick="checkAnswer(3)" id="ansBtn3">0</button>
+      <button onclick="checkAnswer(4)" id="ansBtn4">0</button>
+     
     
-</body>
+ </body>
 </html>
