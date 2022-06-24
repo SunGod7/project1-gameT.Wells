@@ -93,13 +93,13 @@ let correctAnswer = 0;
 let score = 0;
 let gameWon = 35;
 let gameOver = score < 35;
-//let  gameOn = false;
+let gameOn = false;
 
 function startGame(){
-
+  
 document.getElementById("startBtn").disabled = true;
   //  
-
+  nextQuestion()
     //sets timer
     let timeDisplay = document.getElementById("timeDisplay");
     timeDisplay.hidden = false
@@ -113,6 +113,7 @@ document.getElementById("startBtn").disabled = true;
     // stops timer
     if (timeLeft == 0 || score == gameWon) {
         clearInterval(timerInterval);
+        
 
      } //else {
   //     let endGame = startBtn.disabled = false;
@@ -161,9 +162,12 @@ function checkAnswer(btnIndex) {
      nextQuestion()
      
      if (score == gameWon) {
+      
       console.log('gameWon')
       document.getElementById('gameWon').textContent = 'Your Free!!!!'
+      
      } 
+     
      
     //  if (timeLeft == 0){
     //   console.log('gameOver')
@@ -171,24 +175,37 @@ function checkAnswer(btnIndex) {
     //  }
 }
   //
- 
+  
+  //console.log(answer)
 
 
+ const reStart = () => {
+  document.getElementById("scoreBrd").value= ''
+  
+  startBtn.disabled = false;
+    clearInterval(timerInterval);
+    timeLeft = 26;
+     //score 
+    //scoreBrd = ""
+    gameOn = true;
+    startGame()
+    //return(score = 0)
+    //resetScore()
+    
+}
+//console.log(score = 0)
+// const resetScore = () => {
+//    score = ""
+   
 
-
-// const reStart = () => {
-
-//     startBtn.disabled = false;
-//     clearInterval(timerInterval);
-//     timeLeft = 26;
-//     score.innerHTML = "0"
-//     gameOn = true;
 // }
-// //
-// startGame()
-// resetButton.addEventListener("click", reStart);
+
+//
+//console.log(reStart)
+//resetButton.addEventListener("click", reStart);
 
   //reStart(enGmFunc)
+     //document.getElementById("scoreBrd
 
 //         startBtn.disabled = false;
 //           clearInterval(timerInterval);
@@ -202,4 +219,10 @@ function checkAnswer(btnIndex) {
 //            //gameOver.textContent = ""
 //            // startGame()
 // }
-//
+//<input type="text" id="result">
+//{/* <input type="button" value="Reset" onclick="clear1()">
+
+//{/* <script>
+//function clear1(){
+//document.getElementById("result").value= ''}
+//</script> } }
