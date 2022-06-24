@@ -171,27 +171,19 @@ function checkAnswer(btnIndex) {
     //  }
 }
   //
+ 
+//reStart(enGmFunc)
 
-
-  
-  
-  
-  
-  
-  
-  
-  
-reSetBtn.addEventListener('click', reStart) 
-      function reStart() {
-          startBtn.disabled = false;
-          clearInterval(timerInterval);
-          timeLeft = 26;
+//         startBtn.disabled = false;
+//           clearInterval(timerInterval);
+//           timeLeft = 26;
       
-          if (score = gameWon) {
-        score.innerHTML = "0"
-      }      
-
-            // gameWon.textContent = ""
-           //gameOver.textContent = ""
-           // startGame()
-}
+//           if (score = gameWon) {
+//         score.innerHTML = "0"
+//       }      
+//       //reStart(C)
+//             // gameWon.textContent = ""
+//            //gameOver.textContent = ""
+//            // startGame()
+// }
+//
