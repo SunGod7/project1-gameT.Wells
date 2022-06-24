@@ -93,7 +93,7 @@ let correctAnswer = 0;
 let score = 0;
 let gameWon = 35;
 let gameOver = score < 35;
-
+//let  gameOn = false;
 
 function startGame(){
 
@@ -172,7 +172,23 @@ function checkAnswer(btnIndex) {
 }
   //
  
-//reStart(enGmFunc)
+
+
+
+
+// const reStart = () => {
+
+//     startBtn.disabled = false;
+//     clearInterval(timerInterval);
+//     timeLeft = 26;
+//     score.innerHTML = "0"
+//     gameOn = true;
+// }
+// //
+// startGame()
+// resetButton.addEventListener("click", reStart);
+
+  //reStart(enGmFunc)
 
 //         startBtn.disabled = false;
 //           clearInterval(timerInterval);
