@@ -1,5 +1,11 @@
+
+
+
+
+
 # project1-gameT.Wells
 
+ main
 //Kat Knap//
 
 The dog was kid knapped by some cats and is trapped in the yard.
@@ -12,4 +18,3 @@ the player must click the right sum. player must get 7 questions right inorder t
 
 player has 5 seconds to answer or game is over.
 
-player can choose which type of equations they want.
