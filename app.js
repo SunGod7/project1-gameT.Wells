@@ -7,15 +7,18 @@ const ansTwo = document.getElementById('ansBtn2')
 const ansThree = document.getElementById('ansBtn3')
 const ansFour = document.getElementById('ansBtn4')
 const reSetBtn = document.getElementById('resetButton')
-
+// this.image = document.getElementById('catOne')
+// this.image = document.getElementById('catTwo')
+// this.image = document.getElementById('dog')
 // document.addEventListener('DOMContentLoaded', main)
 // function main (){
 const ctx = game.getContext('2d');
 
-// game.width = 550;
-// game.height= 300;
-// game.setAttribute('width', 600)
-// game.setAttribute('height', 300)
+// draw(ctx) {
+//   ctx.fillStyle = 'black'
+//   ctx.fillRect(this.x, this.y, this.width, this.height)
+//   ctx.drawImage = 'red'
+// }
 game.setAttribute('width', getComputedStyle(game)['width'])
 game.setAttribute('height', getComputedStyle(game)['height'])
 
@@ -42,33 +45,7 @@ ctx.lineWidth = 5
 // ctx.arc(300, 300, 30, 0, Math.PI = 2, false);
 // ctx.strokeStyle = 'black'
 // ctx.stroke()
-
-
-
-
-  //ctx.strokeRect(0, 0, 20, 20)
-  console.log(game)
-
-//}
-
-
-
-
-  // let playerDog = new Crawler(10, 10, 'red', 16, 16)
-  //let bossCat = new Crawler(200, 50, '#bada55', 32, 48)
- //let lilCat = new Crawler(10, 10, 'red', 16, 16)
-
-
-
-
- 
-
-
-
-
-
-  
-
+console.log(game)
 
 
 document.getElementById("ansBtn1").style.padding = "15px";
@@ -97,8 +74,9 @@ let gameOn = false;
 
 function startGame(){
   
+  
 document.getElementById("startBtn").disabled = true;
-  //  
+   
   nextQuestion()
     //sets timer
     let timeDisplay = document.getElementById("timeDisplay");
@@ -115,12 +93,12 @@ document.getElementById("startBtn").disabled = true;
         clearInterval(timerInterval);
         
 
-     } //else {
-  //     let endGame = startBtn.disabled = false;
-  // //  
-  //   }
+     } 
+  
    
-        if (timeLeft == 0) { ///figure this out
+  
+   
+      if (timeLeft == 0) { 
           let YouLose = document.getElementById('gameOver').textContent = 'You lose!!!!'
           console.log(YouLose)
     }
@@ -167,62 +145,24 @@ function checkAnswer(btnIndex) {
       document.getElementById('gameWon').textContent = 'Your Free!!!!'
       
      } 
-     
-     
-    //  if (timeLeft == 0){
-    //   console.log('gameOver')
-    //   document.getElementById('gameOver').textContent = 'You lose!!!!'
-    //  }
 }
-  //
   
-  //console.log(answer)
 
-
- const reStart = () => {
-  document.getElementById("scoreBrd").value= ''
-  
-  startBtn.disabled = false;
+const reStart = () => {
+   
+    startBtn.disabled = false;
     clearInterval(timerInterval);
     timeLeft = 26;
-     //score 
-    //scoreBrd = ""
+    //startGame()
     gameOn = true;
-    startGame()
-    //return(score = 0)
-    //resetScore()
-    
+    score = 0;
+    document.getElementById("scoreBrd").innerText = ''
+    document.getElementById('gameWon').innerText = ''
+    document.getElementById('gameOver').innerText = ''
+    document.getElementById("ansBtn1").innerText = ''
+    document.getElementById("ansBtn2").innerText = ''
+    document.getElementById("ansBtn3").innerText = ''
+    document.getElementById("ansBtn4").innerText = ''
+    document.getElementById("opperations").innerText = ''
+    document.getElementById("timeDisplay").innerText = ''
 }
-//console.log(score = 0)
-// const resetScore = () => {
-//    score = ""
-   
-
-// }
-
-//
-//console.log(reStart)
-//resetButton.addEventListener("click", reStart);
-
-  //reStart(enGmFunc)
-     //document.getElementById("scoreBrd
-
-//         startBtn.disabled = false;
-//           clearInterval(timerInterval);
-//           timeLeft = 26;
-      
-//           if (score = gameWon) {
-//         score.innerHTML = "0"
-//       }      
-//       //reStart(C)
-//             // gameWon.textContent = ""
-//            //gameOver.textContent = ""
-//            // startGame()
-// }
-//<input type="text" id="result">
-//{/* <input type="button" value="Reset" onclick="clear1()">
-
-//{/* <script>
-//function clear1(){
-//document.getElementById("result").value= ''}
-//</script> } }
